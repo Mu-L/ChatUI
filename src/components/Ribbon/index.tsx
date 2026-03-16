@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 export interface RibbonProps {
   className?: string;
-  position?: 'left' | 'right';
+  position?: 'left' | 'center' | 'right';
   size?: 'sm' | 'md';
   color?: 'primary' | 'gray';
   children?: React.ReactNode;

@@ -4,10 +4,10 @@ import { Price } from '../Price';
 import { Button } from '../Button';
 import { Flex, FlexItem } from '../Flex';
 import { Text } from '../Text';
-import { StatusBadge } from '../StatusBadge';
+import { Ribbon } from '../Ribbon';
 import { formatExpireTime } from '../../utils/date';
 
-type CouponStatus = 'normal' | 'nearExpired' | 'expired' | 'used';
+type CouponStatus = 'normal' | 'nearExpired' | 'expired' | 'used' | 'deleted';
 
 export interface CouponProps {
   className?: string;
@@ -40,6 +40,7 @@ const statusLabelMap: Record<CouponStatus, string> = {
   nearExpired: '快失效',
   expired: '已过期',
   used: '已使用',
+  deleted: '已删除',
 };
 
 export const Coupon = (props: CouponProps) => {
@@ -82,7 +83,7 @@ export const Coupon = (props: CouponProps) => {
                 : null
             )
         }
-        <Text className="Coupon-condition" truncate>
+        <Text className="Coupon-condition" truncate={2}>
           {condition}
         </Text>
       </Flex>
@@ -111,7 +112,15 @@ export const Coupon = (props: CouponProps) => {
           </Button>
         </Flex>
       )}
-      {statusLabel && <StatusBadge text={statusLabel} />}
+      {statusLabel && (
+        <Ribbon
+          color={['expired', 'used', 'deleted'].includes(status) ? 'gray' : 'primary'}
+          position="right"
+          size="sm"
+        >
+          {statusLabel}
+        </Ribbon>
+      )}
     </Flex>
   );
 };

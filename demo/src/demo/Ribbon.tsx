@@ -15,6 +15,10 @@ export default () => (
       </Card>
       <br />
       <Card style={{ position: 'relative', width: '160px', height: '80px' }}>
+        <Ribbon position="center">居中角标</Ribbon>
+      </Card>
+      <br />
+      <Card style={{ position: 'relative', width: '160px', height: '80px' }}>
         <Ribbon position="right">居右角标</Ribbon>
       </Card>
     </DemoSection>

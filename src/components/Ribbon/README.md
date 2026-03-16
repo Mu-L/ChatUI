@@ -29,6 +29,10 @@ export default function() {
       </Card>
       <br />
       <Card style={{ position: 'relative', width: '160px', height: '80px' }}>
+        <Ribbon position="center">居中</Ribbon>
+      </Card>
+      <br />
+      <Card style={{ position: 'relative', width: '160px', height: '80px' }}>
         <Ribbon position="right">居右</Ribbon>
       </Card>
 
@@ -70,7 +74,7 @@ export default function() {
 | 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | className | string | - | 自定义类名 |
-| position | `'left' \| 'right'` | `'left'` | 角标位置 |
+| position | `'left' \| 'center' \| 'right'` | `'left'` | 角标位置 |
 | size | `'sm' \| 'md'` | `'md'` | 角标尺寸 |
 | color | `'primary' \| 'gray'` | `'primary'` | 角标颜色 |
 | children | ReactNode | - | 角标内容 |
@@ -79,6 +83,6 @@ export default function() {
 
 | 类型 | 说明 |
 | --- | --- |
-| `position` | 控制角标显示在左上角还是右上角 |
+| `position` | 控制角标显示在左上角、居中还是右上角 |
 | `size` | 控制角标的字体大小，`sm` 为小尺寸，`md` 为中等尺寸 |
 | `color` | 控制角标的颜色主题，`primary` 为主色，`gray` 为灰色 |

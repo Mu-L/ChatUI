@@ -10,9 +10,6 @@
   --coupon-bg: #fff2f2;
   --coupon-border-color: rgba(232, 16, 0, 0.15);
 
-  --coupon-badge-color: #662600;
-  --coupon-badge-bg: #ffefd9;
-
   --btn-padding: 3px 12px;
   --btn-bg: var(--red);
   --btn-active-bg: var(--btn-bg);
@@ -38,16 +35,14 @@
     margin: 12px;
   }
   &[data-status='expired'],
-  &[data-status='used'] {
+  &[data-status='used'],
+  &[data-status='deleted'] {
     --coupon-border-color: var(--color-line-2);
     --coupon-value-color: var(--color-text-1);
     --coupon-condition-color: var(--color-text-3);
     --coupon-main-text-color: var(--color-text-1);
     --coupon-desc-color: var(--color-text-2);
     --coupon-bg: var(--color-fill-2);
-
-    --coupon-badge-color: var(--color-text-2);
-    --coupon-badge-bg: rgba(80, 96, 122, 0.2);
 
     --btn-bg: transparent;
     --btn-border-color: var(--red);
@@ -67,14 +62,11 @@
     --btn-font-size: 12px;
 
     &[data-status='expired'],
-    &[data-status='used'] {
+    &[data-status='used'],
+    &[data-status='deleted'] {
       --btn-border-color: var(--color-line-2);
       --btn-color: var(--color-text-2);
     }
-  }
-  .StatusBadge {
-    top: -1px;
-    right: -1px;
   }
   .Countdown-unit {
     color: var(--coupon-value-color);
