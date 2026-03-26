@@ -166,6 +166,7 @@ export const Chat = React.forwardRef<HTMLDivElement, ChatProps>((props, ref) => 
     onInputChange,
     onInputBlur,
     onSend,
+    onBeforeSend,
     onImageSend,
     inputOptions,
     composerRef,
@@ -281,6 +282,7 @@ export const Chat = React.forwardRef<HTMLDivElement, ChatProps>((props, ref) => 
             onChange={onInputChange}
             onBlur={onInputBlur}
             onSend={onSend}
+            onBeforeSend={onBeforeSend}
             onImageSend={onImageSend}
             rightAction={rightAction}
           />
